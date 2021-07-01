@@ -46,3 +46,794 @@ Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
   [1m[35mSQL (0.6ms)[0m  DELETE FROM "students" WHERE "students"."id" = ?  [["id", 2]]
   [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
   [1m[35mStudent Load (0.2ms)[0m  SELECT "students".* FROM "students"
+Started GET "/students/new" for ::1 at 2021-07-01 14:50:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.7.1) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.7.1) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.7.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (0.8ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.3ms)
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSchoolClass (20210701183842)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "school_classes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "room_number" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210701183842"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-07-01 18:50:29.024229"], ["updated_at", "2021-07-01 18:50:29.024229"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/students/new" for ::1 at 2021-07-01 14:50:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/mariahmorales/Flatiron/code/rails-form_for-lab/app/views/students/new.html.erb:6: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/students/new.html.erb:6: syntax error, unexpected end-of-input, expecting end
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.8ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.3ms)
+Started GET "/students/new" for ::1 at 2021-07-01 14:51:01 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 239ms (Views: 235.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2021-07-01 14:51:03 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"T+QIezn/oVAP1CHQSBgudLmQE9CTuGo82fuleV1BfDZZoUgoqsk35505n22SlOKjtgflQkzHShw16sIY3dT0Ng==", "student"=>{"first_name"=>"Mariah"}}
+No template found for StudentsController#create, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for ::1 at 2021-07-01 14:58:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 143ms (Views: 134.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for ::1 at 2021-07-01 14:58:48 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/new" for ::1 at 2021-07-01 15:00:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/new"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendered collection of /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (2.6ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.7ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.2ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.0ms)
+Started GET "/students/new" for ::1 at 2021-07-01 15:00:59 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 150ms (Views: 139.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/students" for ::1 at 2021-07-01 15:01:02 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5AjULj3SQod4DRofpYMr4Ty/L4Csh6XD3mmTdYTXWG/yTZR9ruTUMOrgpKJ/D+c2MyjZEnP4heMyePQUBELQbw==", "student"=>{"first_name"=>"Mariah", "last_name"=>"Morales"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Mariah"], ["last_name", "Morales"], ["created_at", "2021-07-01 19:01:02.786203"], ["updated_at", "2021-07-01 19:01:02.786203"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/3
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/students/3" for ::1 at 2021-07-01 15:01:02 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 18ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/" for ::1 at 2021-07-01 15:01:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/students"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered collection of /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (4.2ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (31.8ms)
+Started GET "/students/1" for ::1 at 2021-07-01 15:01:12 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/2" for ::1 at 2021-07-01 15:01:15 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=2):
+  
+app/controllers/students_controller.rb:7:in `show'
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.7ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.5ms)
+Started GET "/students/1" for ::1 at 2021-07-01 15:01:18 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/new" for ::1 at 2021-07-01 15:01:22 -0400
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2021-07-01 15:01:26 -0400
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qIZ03HlGYm+VRO+Z+4PD53+6Go5p0Yo1Rmnot9Dztlm+wzSP6nD02AepUSQhDw8wcC3sHLauqhWqeI/WUGY+WQ==", "student"=>{"first_name"=>"Mariah ", "last_name"=>"Morales"}, "commit"=>"Create Student"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "students" ("first_name", "last_name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["first_name", "Mariah "], ["last_name", "Morales"], ["created_at", "2021-07-01 19:01:26.353626"], ["updated_at", "2021-07-01 19:01:26.353626"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/students/4
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/students/4" for ::1 at 2021-07-01 15:01:26 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students/3" for ::1 at 2021-07-01 15:01:28 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/new" for ::1 at 2021-07-01 15:23:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#new as HTML
+  Rendering school_classes/new.html.erb within layouts/application
+  Rendered school_classes/new.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 140ms (Views: 131.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/school_classes" for ::1 at 2021-07-01 15:24:09 -0400
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yft5sZL6epNtWYwwEH7wvdPU++zGd94WWsNcpuO5YQJ3vjniAczsJP+0Mo3K8jxq3EMNfhkI/ja20jvHYyzpAg==", "school_class"=>{"title"=>"Software Engineering", "room_number"=>"rocks"}, "commit"=>"Create School class"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Software Engineering"], ["room_number", 0], ["created_at", "2021-07-01 19:24:09.680461"], ["updated_at", "2021-07-01 19:24:09.680461"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2021-07-01 15:24:09 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1/edit" for ::1 at 2021-07-01 15:24:14 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/1" for ::1 at 2021-07-01 15:24:17 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hGsFgQ0A0JvfEgTE7owfhtAXn+PmmspJGoIunvyFqKuSLkXSnjZGLE3/unk0ANNR34BpcTnl6mn2k0n/fBAgqw==", "school_class"=>{"title"=>"Software Engineering", "room_number"=>"101"}, "commit"=>"Update School class", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Software Engineering"], ["room_number", 101], ["created_at", "2021-07-01 19:24:17.277593"], ["updated_at", "2021-07-01 19:24:17.277593"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/2
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/school_classes/2" for ::1 at 2021-07-01 15:24:17 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/2" for ::1 at 2021-07-01 15:24:37 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/2/edit" for ::1 at 2021-07-01 15:24:41 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/2" for ::1 at 2021-07-01 15:24:46 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCkIkEmA6kdQXxkRX4yGeCV98/Hg+fENKQsIyrk1IhtKbEjD2rZ88MKyp6yFAEqvKuoFYz+G0S3FGm+rOaCqGw==", "school_class"=>{"title"=>"Software Engineering", "room_number"=>"please kick rocks"}, "commit"=>"Update School class", "id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Software Engineering"], ["room_number", 0], ["created_at", "2021-07-01 19:24:46.103354"], ["updated_at", "2021-07-01 19:24:46.103354"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/3
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/school_classes/3" for ::1 at 2021-07-01 15:24:46 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.4ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/school_classes/3/edit" for ::1 at 2021-07-01 15:24:51 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/3" for ::1 at 2021-07-01 15:24:55 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0tJ/ZeecT2kVxMI/thzq5Hd5tr01JH2m+NpdMGm7emzElz82dKrZ3ocpfIJskCYzeO5AL+pbXYYUyzpR6S7ybA==", "school_class"=>{"title"=>"Software Engineering", "room_number"=>"204"}, "commit"=>"Update School class", "id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Software Engineering"], ["room_number", 204], ["created_at", "2021-07-01 19:24:55.449864"], ["updated_at", "2021-07-01 19:24:55.449864"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/4
+Completed 302 Found in 8ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/school_classes/4" for ::1 at 2021-07-01 15:24:55 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/3" for ::1 at 2021-07-01 15:24:58 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/2" for ::1 at 2021-07-01 15:25:01 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/" for ::1 at 2021-07-01 15:26:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActionController::RoutingError (No route matches [GET] "/school_classes"):
+  
+actionpack (5.0.7.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.7.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.7.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.7.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.7.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.7.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.0.7.1) lib/rails/engine.rb:522:in `call'
+rack (2.2.3) lib/rack/handler/webrick.rb:95:in `service'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+/Users/mariahmorales/.rvm/rubies/ruby-2.6.1/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.5ms)
+  Rendered collection of /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [12 times] (3.0ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (27.8ms)
+Started GET "/school_classes/1" for ::1 at 2021-07-01 15:26:28 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.5ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 154ms (Views: 140.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/school_classes/2" for ::1 at 2021-07-01 15:26:30 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2021-07-01 15:27:09 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.4ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 11.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/school_classes/1/edit" for ::1 at 2021-07-01 15:27:12 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/1" for ::1 at 2021-07-01 15:27:16 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Sxmq/uclxxgzzV22ge5/tSAPRT9qOko9lZE3yf+t5/tdXOqtdBNRr6Eg4wtbYrNiL5izrbVFah15gFCofzhv+w==", "school_class"=>{"title"=>"Software Engineering", "room_number"=>"12"}, "commit"=>"Update School class", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Software Engineering"], ["room_number", 12], ["created_at", "2021-07-01 19:27:16.221457"], ["updated_at", "2021-07-01 19:27:16.221457"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/5
+Completed 302 Found in 7ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/school_classes/5" for ::1 at 2021-07-01 15:27:16 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2021-07-01 15:27:19 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1/edit" for ::1 at 2021-07-01 15:28:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2021-07-01 15:28:13 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 123ms (Views: 121.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/1/edit" for ::1 at 2021-07-01 15:28:17 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2021-07-01 15:28:17 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/1/edit" for ::1 at 2021-07-01 15:29:17 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2021-07-01 15:29:17 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/1/edit" for ::1 at 2021-07-01 15:29:32 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 33ms (Views: 22.7ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/school_classes/1" for ::1 at 2021-07-01 15:29:43 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uCMQZUwDC63Em+9qb7z01UhR5vTFUa43VQb27cDZICGuZlA23zWdGlZ2Ude1MDgCR8YQZhoujhe5F5GMQEyoIQ==", "school_class"=>{"title"=>"Math", "room_number"=>"209"}, "commit"=>"Update School class", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Math"], ["room_number", 209], ["created_at", "2021-07-01 19:29:43.654197"], ["updated_at", "2021-07-01 19:29:43.654197"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/6
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/school_classes/6" for ::1 at 2021-07-01 15:29:43 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/1/edit" for ::1 at 2021-07-01 15:30:22 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 16.2ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/school_classes/1" for ::1 at 2021-07-01 15:30:26 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f4a0sNnq44TPPPH33mX2643x6FxTYgflSbxRRDaRIXdpw/TjStx1M13RT0oE6To8gmYezowdJ8WlrTYltgSpdw==", "school_class"=>{"title"=>"ELA", "room_number"=>"203"}, "commit"=>"Update School class", "id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "school_classes" SET "title" = ?, "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["title", "ELA"], ["room_number", 203], ["updated_at", "2021-07-01 19:30:26.745214"], ["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/1
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/school_classes/1" for ::1 at 2021-07-01 15:30:26 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/2/edit" for ::1 at 2021-07-01 15:30:30 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.4ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/school_classes/2" for ::1 at 2021-07-01 15:30:36 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mLuHCpZsg7TuX+F8BXqJSCIb+kwE/LBQG7smDm4TyHGO/sdZBVoVA3yyX8Hf9kWfLYwM3tuDkHD3qkFv7oZAcQ==", "school_class"=>{"title"=>"Data Anaylsis", "room_number"=>"101"}, "commit"=>"Update School class", "id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "school_classes" SET "title" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["title", "Data Anaylsis"], ["updated_at", "2021-07-01 19:30:36.520085"], ["id", 2]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/2
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/school_classes/2" for ::1 at 2021-07-01 15:30:36 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/school_classes/3" for ::1 at 2021-07-01 15:30:39 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/3/edit" for ::1 at 2021-07-01 15:30:42 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/3" for ::1 at 2021-07-01 15:30:47 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+A+KFCtotOvyOIuSlg7zZJLbeLpph1mphjzeVGYwPL7uSspHuF4iXGDVNS9Mgj+znUyOKLb4eYlqLbk15qW0vg==", "school_class"=>{"title"=>"Science", "room_number"=>"402"}, "commit"=>"Update School class", "id"=>"3"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "school_classes" SET "title" = ?, "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["title", "Science"], ["room_number", 402], ["updated_at", "2021-07-01 19:30:47.708819"], ["id", 3]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/3
+Completed 302 Found in 8ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/school_classes/3" for ::1 at 2021-07-01 15:30:47 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/4" for ::1 at 2021-07-01 15:30:49 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/4/edit" for ::1 at 2021-07-01 15:30:55 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/4" for ::1 at 2021-07-01 15:31:01 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MYoSEaoS7yIZo0vUC5m0BnwCS+ffYsnddMjUn/UEjusnz1JCOSR5lYtO9WnRFXjRc5W9dQAd6f2Y2bP+dZEG6w==", "school_class"=>{"title"=>"Social Studies", "room_number"=>"502"}, "commit"=>"Update School class", "id"=>"4"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "school_classes" SET "title" = ?, "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["title", "Social Studies"], ["room_number", 502], ["updated_at", "2021-07-01 19:31:01.497855"], ["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/4
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/school_classes/4" for ::1 at 2021-07-01 15:31:01 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/school_classes/5" for ::1 at 2021-07-01 15:31:03 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/5/edit" for ::1 at 2021-07-01 15:31:07 -0400
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering school_classes/edit.html.erb within layouts/application
+  Rendered school_classes/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/school_classes/5" for ::1 at 2021-07-01 15:31:12 -0400
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tjX9WTmgDkhvMU3ElQKOjFIO60gYxTTRX81+nW/jOFugcL0KqpaY//3c83lPjkJbXZkd2se6FPGz3Bn873awWw==", "school_class"=>{"title"=>"Software Engineering", "room_number"=>"106"}, "commit"=>"Update School class", "id"=>"5"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "school_classes" SET "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["room_number", 106], ["updated_at", "2021-07-01 19:31:12.350520"], ["id", 5]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/school_classes/5
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/school_classes/5" for ::1 at 2021-07-01 15:31:12 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/6" for ::1 at 2021-07-01 15:31:14 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/7" for ::1 at 2021-07-01 15:31:17 -0400
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find SchoolClass with 'id'=7):
+  
+app/controllers/school_classes_controller.rb:10:in `show'
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (1.6ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendering /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /Users/mariahmorales/.rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.6ms)
